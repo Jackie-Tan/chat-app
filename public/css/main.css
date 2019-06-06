@@ -1,0 +1,67 @@
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(181,43,39, .8);;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgba(255, 255, 255, .5); 
+    border-radius: 10px;
+  }
+
+.fill {
+    height: 100%;
+    min-height: 100%;
+}
+
+div.chat__messages {
+    height: 85vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+div.chat__credit {
+    position: relative;
+    bottom: 0px;
+}
+
+div.chat__sidebar {
+    height: 85vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+div.compose {
+    position: relative;
+    bottom: 0px;
+    padding-right: 15px;
+}
+
+ul.users {
+    margin: 0px;
+}
+
+span.message__name {
+    font: bold 100% Sans-serif;
+}
+
+span.message__time {
+    color: rgba(255, 255, 255, .5)
+}
+
+div.message {
+    margin: 16px 0px;
+}
+
+h2.room-title {
+    background-color: rgba(181,43,39, 1);
+}
