@@ -12,12 +12,13 @@
 <body>
     <div class="container-fluid fill chat">
         <div class="row fill">
-            <div id="sidebar-col" class="col p-0 bg-danger text-white text-center">
-                <div id="sidebar" class="chat__sidebar"></div>
-                <div id="credit" class="text-light px-1 font-weight-light chat__credit">Designed by Jackie with love from Bootstrap and Udemy! <3</div>
+            <!-- side bar -->
+            <div id="sidebar-col" class="col-12 col-lg-2 p-0 bg-danger text-white">
+                    <div id="sidebar" class="chat__sidebar"></div>
             </div>
-            <div class="col-10 pr-0 bg-dark text-white chat__main">
-                <div id="messages" class="mb-3 chat__messages"></div>
+            <!-- main chat area -->
+            <div class="col-12 col-lg-10 pr-0 pt-1 bg-dark text-white chat__main">
+                <div id="messages" class="chat__messages"></div>
 
                 <div class='compose'>
                     <form id="message-form">
@@ -57,13 +58,21 @@
     </script>
 
     <script id="sidebar-template" type="text/html">
-        <h2 class="text-center py-3 room-title">{{room}}</h2>
-        <h3 class="text-center list-title">Online Users</h3>
-        <ul class="users">
-            {{#users}}
-                <li>{{username}}</li>
-            {{/users}}
-        </ul>
+        <nav class="navbar navbar-expand-lg navbar-dark flex-lg-column p-0">
+            <div class="h1 navbar-brand ml-lg-0 ml-3 room-title">{{room}}</div>
+            <button class="navbar-toggler mr-2" type="button" data-toggle="collapse" data-target="#collapseNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse bg-danger navbar-collapse flex-lg-column" id='collapseNav'>
+                <div class="nav-item h5 ml-lg-0 ml-3 list-title">Online Users</div>
+                <ul class="nav-item users pl-lg-0">
+                    {{#users}}
+                        <li class="text-light">{{username}}</li>
+                    {{/users}}
+                </ul>
+            </div>
+            <!-- <div id="credit" class="text-light px-1 font-weight-light chat__credit">Designed by Jackie with love from Bootstrap and Udemy! <3</div> -->
+        </nav>
     </script>
     
 

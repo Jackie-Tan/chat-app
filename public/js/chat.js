@@ -36,7 +36,8 @@ const autoscroll = () => {
     // Height of the new message
     const newMessageStyle = getComputedStyle($newMessage)
     const newMessageMargin = parseInt(newMessageStyle.marginBottom)
-    const newMessageHeight = $newMessage.offsetHeight + newMessageMargin
+    // const newMessageHeight = $newMessage.offsetHeight + newMessageMargin
+    const newMessageHeight = $newMessage.scrollHeight
 
     // Visible Height
     const visibleHeight = $messages.offsetHeight
@@ -45,7 +46,7 @@ const autoscroll = () => {
     const containerHeight = $messages.scrollHeight
 
     // How far have I scrolled? 
-    const scrollOffset = $messages.scrollTop + visibleHeight
+    const scrollOffset = Math.ceil($messages.scrollTop) + visibleHeight
 
     // Scroll only if we are at the last message before the new message is added
     if (containerHeight - newMessageHeight <= scrollOffset) {

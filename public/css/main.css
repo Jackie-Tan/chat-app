@@ -34,21 +34,20 @@ div.chat__credit {
     bottom: 0px;
 }
 
-div.chat__sidebar {
-    height: 85vh;
-    overflow-x: hidden;
-    overflow-y: auto;
-}
+/* div.chat__sidebar {
+    height: 100vh;
+} */
 
 div.compose {
     position: relative;
     bottom: 0px;
+    margin-top: 15px;
     padding-right: 15px;
 }
 
-ul.users {
+/* ul.users {
     margin: 0px;
-}
+} */
 
 span.message__name {
     font: bold 100% Sans-serif;
@@ -59,9 +58,27 @@ span.message__time {
 }
 
 div.message {
-    margin: 16px 0px;
+    margin: 0px;
+    margin-bottom: 16px;
 }
 
-h2.room-title {
-    background-color: rgba(181,43,39, 1);
+ul.users li {
+    list-style-type: none;
 }
+/* nav {
+    background-color: rgba(181,43,39, 1);
+    height: 100%;
+    width: 100%;
+} */
+
+/* li.navbar-text {
+    display: block;
+} */
+
+/* div.list-title {
+    float: left;
+    width: inherit;
+} */
+/* #collapseDiv {
+    display: block;
+} */
