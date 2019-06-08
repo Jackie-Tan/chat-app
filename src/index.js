@@ -40,6 +40,9 @@ io.on('connection', (socket) => {
         const user = getUser(socket.id)
         const filter = new Filter()
 
+        if (user === undefined) {
+            return callback('logout')
+        }
         if (filter.isProfane(message)) {
             return callback('Profanity is not allowed!')
         }

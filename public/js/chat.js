@@ -14,7 +14,7 @@ const locationTemplate = document.querySelector('#location-template').innerHTML
 const sidebarTemplate = document.querySelector('#sidebar-template').innerHTML
 
 //Options
-if (location.search === "") {
+if (location.search === '') {
     alert('Error: You have no access!')
     location.href = '/'
 }
@@ -94,6 +94,10 @@ $messageForm.addEventListener('submit', (e) => {
         $messageFormInput.value = ''
         $messageFormInput.focus()
         if (error) {
+            if (error === 'logout') {
+                alert('Your session has ended. Please login again')
+                location.href = '/'
+            }
             return alert(error)
         }
     })
